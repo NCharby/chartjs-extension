@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="trending-graph collapsable ">
+    <div class="trending-graph__header">
+        <h4>History &amp; Trending</h4>
+        <a href="#" class="collapse-btn">Expand</a>
+    </div>
+    <div class="trending-graph__interface">
+        <div class="trending-graph__controls" >
+            <div class="trending-graph__controls-header">
+                <h5>Contracts</h5>
+                <span>Select up to 5 to display.</span>
+                <span class="trending-graph__selected-count"><span>3</span> / 5 Selected</span>
+            </div>
+            <ul class="trending-graph__legend">
+
+            </ul>
+        </div>
+        <div class="trending-graph__graph">
+            <div class="trending-graph__graph-header">
+                <span class="trending-graph__icon legend-line">Contract Average</span>
+                <span class="trending-graph__icon legend-area">ACO Average</span>
+            </div>
+            <canvas id="chart1" height="275" width="576"></canvas>
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="Charts.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

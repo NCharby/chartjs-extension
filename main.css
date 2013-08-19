@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* ==========================================================================
+   Chart Styles
+   ========================================================================== */
+
+.piechart {
+    overflow: hidden;
+}
+
+.piechart canvas {
+    float: left;
+}
+
+.piechart__info {
+    float: left;
+    width: auto;
+    font-family: sans-serif;
+    margin-left: 5px;
+}
+
+.piechart__info span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #506985;
+	line-height: 1;
+}
+
+.overview-detail .piechart__info span {
+	font-size: 30px;
+}
+
+.trending-graph {
+    width: 770px;
+    overflow: hidden;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+
+.trending-graph__header {
+    background: url("images/icon-trending-chart.png") 10px center no-repeat;
+    padding: 10px 14px;
+    overflow: hidden;
+}
+
+.trending-graph__header h4 {
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    float: left;
+}
+
+.trending-graph__header a {
+    float: right;
+    display: block;
+    color: #000;
+    font-weight: 700;
+    margin-top: 3px;
+    background: url("images/bg-btn-show-hide.png") right 1px no-repeat;
+    height: 18px;
+    padding-right: 22px;
+}
+
+.is-active .trending-graph__header a {
+	background-position: right -16px; 
+}
+
+.trending-graph__interface {
+	display: none;
+}
+
+.is-active .trending-graph__interface {
+	display: block;
+    background: #555f6b;
+    overflow: hidden;
+}
+
+.trending-graph__controls {
+    float: left;
+    height: 100%;
+    width: 167px;
+}
+
+.trending-graph__controls-header {
+    padding: 10px 0 8px 12px;
+}
+
+.trending-graph__controls-header {
+    padding: 10px 0 8px 12px;
+}
+
+.trending-graph__controls h5 {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.trending-graph__controls span {
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.trending-graph__selected-count {
+    display: block;
+	color: #fff;
+	font-size: 12px
+}
+
+.trending-graph__legend {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 275px;
+    list-style-type: none;
+    background: url("images/bg-trending-chart-controls.png") center top repeat-x;
+    padding: 0;
+    margin: 0;
+}
+
+.trending-graph__legend li {
+    padding: 10px 0 10px 9px;
+    border-bottom: 1px solid #444c56;
+    color: #fff; 
+    overflow: hidden;
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0;
+}
+
+.trending-graph__legend .legend-btn {
+    display: block;
+    float: left;
+    width: 29px;
+    height: 15px;
+    margin-top: 2px;
+    background: url("images/sprite-trending-chart-legend-btns.png") right top no-repeat;
+}
+
+.trending-graph__legend .active .legend-btn {
+    background-position: left top;
+}
+
+.trending-graph__legend .legend-text {
+    width: 105px;
+    float: left;
+    padding-left: 6px;
+    font-size: 13px;
+}
+
+.trending-graph__graph {
+    width: 579px;
+    float: left;
+    background: #f0f4f8 url("images/bg-trending-chart-graph-header.png") center top repeat-x;
+    padding: 0 12px 18px;
+}
+
+.trending-graph__graph canvas {
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+
+.trending-graph__graph-header {
+    height: 25px;
+    padding: 15px 0px 15px 8px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.trending-graph__graph-timeframe {
+    float: right;
+    color: #4c535c;
+    font-size: 12px;
+    font-weight: 700;
+    padding-right: 35px;
+    margin: 0;
+}
+
+.trending-graph__graph-timeframe .datepicker {
+    margin-left: 5px;
+    font-weight: 400;
+    padding-left: 10px;
+    background: transparent url("images/bg-trending-chart-date-field.png") left top no-repeat;
+    border: 0;
+    width: 167px;
+    height: 29px;
+}
+
+.trending-graph__graph-timeframe .datepicker + .trigger {
+	position: absolute;
+}
+
+.trending-graph__icon {
+    display: block;
+    float: left;
+    padding: 1px 0 5px 22px;
+    margin-top: 6px;
+    margin-right: 25px;
+    font-weight: 700;
+    color: #4c535c;
+}
+
+.trending-graph__icon.legend-line {
+	padding-left: 18px;
+    background: url("images/icon-trending-chart-legend-line.png") left top no-repeat;
+}
+
+.trending-graph__icon.legend-area {
+    background: url("images/icon-trending-chart-legend-area.png") left top no-repeat;
+}
+
+.trending-graph__wrapper {
+    position: relative;
+}
+
+.hoverBox {
+    position: absolute;
+    top: 25px;
+    width: 162px;
+    background: transparent url("images/bg-hoverbox-top.png") left top no-repeat;
+    display: none;
+}
+
+.hoverBox__inner {
+    padding-bottom: 3px;
+    background: transparent url("images/bg-hoverbox-bottom.png") left bottom no-repeat;
+}
+
+.hoverBox__header {
+    background: #e4e4e4;
+    color: #333;
+    margin-top: 3px;
+    padding: 5px 10px 2px;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+}
+
+.hoverBox__full-label {
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.hoverBox__chart-name {
+    display: block;
+}
+
+.hoverBox__value-list {
+    padding: 8px 10px 5px;
+    background: #fff;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    list-style-type: none;
+    margin: 0;
+}
+
+.hoverBox__value-list li {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.hoverBox__bg-color {
+    display: block;
+    float: left;
+    width: 9px;
+    height: 9px;
+    margin: 7px 5px 0 0;
+    background-image: url("images/bg-hoverbox-circle-mask.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hoverBox__item-value {
+    display: block;
+    float: left;
+    width: 15px;
+    color: #555;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.hoverBox__item-desc {
+    display: block;
+    float: right;
+    width: 100px;
+    color: #555;
+    padding-top: 4px;
+    font-size: 13px;
+    line-height: 1;
+}
